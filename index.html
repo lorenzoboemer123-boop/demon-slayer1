@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Fight: Tanjiro vs Giyuu</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="title-card">
+        <p class="eyebrow">First playable prototype</p>
+        <h1>Tanjiro Axe Tutorial vs. Giyuu</h1>
+        <p>Break Giyuu's composure once. This is a training encounter, not a fight to defeat him.</p>
+      </section>
+
+      <section class="difficulty-panel" aria-label="Difficulty selection">
+        <label for="difficultySelect">Difficulty</label>
+        <select id="difficultySelect"></select>
+        <p id="difficultyDescription"></p>
+      </section>
+
+      <section class="hud" aria-live="polite">
+        <div><span>Tanjiro HP</span><meter id="playerHp" min="0" max="100" value="100"></meter><strong id="playerHpText"></strong></div>
+        <div><span>Giyuu HP</span><meter id="enemyHp" min="0" max="100" value="100"></meter><strong id="enemyHpText"></strong></div>
+        <div><span>Giyuu Composure</span><meter id="enemyComposure" min="0" max="100" value="100"></meter><strong id="enemyComposureText"></strong></div>
+        <div><span>Timer</span><strong id="timerText">0.0s</strong></div>
+        <div><span>Damage Taken</span><strong id="damageTakenText">0</strong></div>
+      </section>
+
+      <canvas id="gameCanvas" width="960" height="540" aria-label="2D tutorial fight game canvas"></canvas>
+
+      <section class="controls">
+        <h2>Controls</h2>
+        <ul>
+          <li><kbd>A</kbd>/<kbd>D</kbd> or <kbd>←</kbd>/<kbd>→</kbd>: move</li>
+          <li><kbd>W</kbd>, <kbd>↑</kbd>, or <kbd>Space</kbd>: jump</li>
+          <li><kbd>J</kbd>: light axe swing</li>
+          <li><kbd>K</kbd>: heavy axe chop</li>
+          <li><kbd>L</kbd>: block</li>
+          <li><kbd>Shift</kbd>: clumsy short dodge</li>
+          <li><kbd>R</kbd>: restart tutorial</li>
+        </ul>
+      </section>
+
+      <section id="resultsScreen" class="overlay hidden"></section>
+      <section id="shopScreen" class="overlay hidden"></section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
